@@ -270,7 +270,7 @@ async function run() {
 
 
 
-    
+
     // Admin: block / unblock user
     app.patch("/users/:id/status", verifyToken, verifyAdmin, async (req, res) => {
       try {
@@ -292,6 +292,10 @@ async function run() {
         res.status(500).send({ message: "Internal server error." });
       }
     });
+
+
+
+    
 
     // Admin: change role (donor / volunteer / admin)
     app.patch("/users/:id/role", verifyToken, verifyAdmin, async (req, res) => {
