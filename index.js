@@ -164,7 +164,7 @@ async function run() {
     });
 
 
-    
+
     // Get profile by email (owner or admin)
     app.get("/users/:email", verifyToken, async (req, res) => {
       try {
@@ -267,6 +267,10 @@ async function run() {
       }
     });
 
+
+
+
+    
     // Admin: block / unblock user
     app.patch("/users/:id/status", verifyToken, verifyAdmin, async (req, res) => {
       try {
