@@ -110,7 +110,7 @@ async function run() {
 
 
 
-    
+
     // ===========================
     //           USERS
     // ===========================
@@ -163,6 +163,8 @@ async function run() {
       }
     });
 
+
+    
     // Get profile by email (owner or admin)
     app.get("/users/:email", verifyToken, async (req, res) => {
       try {
