@@ -16,7 +16,7 @@ app.use(
     origin: [
       "http://localhost:5173",
       "http://localhost:5174",
-      // add your frontend deployment domains here
+      "https://give-a-life.netlify.app"
     ],
     credentials: true,
     methods: ["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"],
@@ -64,8 +64,8 @@ const verifyToken = async (req, res, next) => {
 
 async function run() {
   try {
-    await client.connect();
-    console.log("Connected to MongoDB");
+    // await client.connect();
+        // console.log("Connected to MongoDB");
 
     const db = client.db("BloodDonationDB");
     const Users = db.collection("users");
